@@ -36,10 +36,18 @@
   </section>
 
   <script>
-    var dataTable = new DataTable("#SL", {
-      searchable: false,
-      fixedHeight: true,
-    });
+    axios.get('https://www.twse.com.tw/exchangeReport/TWT72U?response=json&date=&selectType=')
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
   </script>
   </body>
 </html>
