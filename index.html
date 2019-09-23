@@ -20,9 +20,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/frappe-datatable@1.13.5/dist/frappe-datatable.min.js" integrity="sha256-UhO8EewbbiMef6HT+4xe1snDjSba9M/wfQGKaoRT6GY=" crossorigin="anonymous"></script>
-    
+    <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+
   </head>
   <body>
   <section class="section">
@@ -35,13 +35,10 @@
   </section>
 
   <script>
-     let datatable = new DataTable({
-        columns: ['Name', 'Position', 'Department'],
-        data: [
-          ['Tiger Nixon', 'System Architect', 'Tech'],
-          ['Garrett Winters', 'Accountant', '']
-        ]
-      });
+    var dataTable = new DataTable("#myTable", {
+      searchable: false,
+      fixedHeight: true,
+    });
   </script>
   </body>
 </html>
